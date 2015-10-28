@@ -27,6 +27,7 @@
                                 <state key="normal" title="search"/>
                                 <connections>
                                     <action selector="candySearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ubu-PG-853"/>
+                                    <segue destination="uv5-Wx-opf" kind="push" id="e4h-uc-KMA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,17 +42,17 @@
             </objects>
             <point key="canvasLocation" x="662" y="289"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Candy Search Result Table View Controller-->
         <scene sceneID="n6K-y0-FQe">
             <objects>
-                <tableViewController id="uv5-Wx-opf" sceneMemberID="viewController">
+                <tableViewController id="uv5-Wx-opf" customClass="candySearchResultTableViewController" customModule="candyKilljoy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="589-9l-P3V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XuC-i0-cBd">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="XuC-i0-cBd">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XuC-i0-cBd" id="SfI-AO-OJ2">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -64,6 +65,7 @@
                             <outlet property="delegate" destination="uv5-Wx-opf" id="J50-ep-Owq"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Seh-G1-8pp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBP-yV-Z5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
