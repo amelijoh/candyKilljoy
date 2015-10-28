@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var candyNameInput: UITextField!
     
-    
+    var candies: [Candy] = []
     
     let BASE_URL = "https://api.nutritionix.com/v1_1/search/"
     let PHRASE = "twizzler"
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         //TO-DO: must write code to parse search string and put underscores in place of spaces or something like that
         makeAPICall()
+        print("# of items in candies array: \(candies.count)")
     }
     
     
@@ -96,18 +97,33 @@ class ViewController: UIViewController {
             }
             
             print(parsedResult)
-            
 //            /* GUARD: Did Flickr return an error? */
 //            guard let stat = parsedResult["stat"] as? String where stat == "ok" else {
 //                print("Flickr API returned an error. See error code and message in \(parsedResult)")
 //                return
 //            }
             
-//            /* GUARD: Is "photos" key in our result? */
-//            guard let photosDictionary = parsedResult["photos"] as? [String:AnyObject] else {
-//                print("Cannot find keys 'photos' in \(parsedResult)")
-//                return
-//            }
+            /* GUARD: Is "photos" key in our result? */
+            guard let candyResults = parsedResult["hits"] as? NSArray else {
+                print("Cannot find keys 'hits' in \(parsedResult)")
+                return
+            }
+            print(candyResults.count)
+            print("The contents of candy results index 0 is \(candyResults[0])")
+            
+            for pieceOfCandy in candyResults {
+                var candyDetails = pieceOfCandy["fields"]
+                var candyName = candyDetails!!["item_name"]
+                let newCandy = Candy()
+                newCandy.name = candyName!! as! String
+                self.candies.append(newCandy)
+            }
+////            var candyItem = candyResults[0]
+//            var candyDetails = candyItem["fields"]
+//            var candyName = candyDetails!!["item_name"]
+//            print(candyName)
+            
+    
 //            let photoArray = photosDictionary["photo"] as! [[String: AnyObject]]
 //            
 //            // I'm assuming this is needed to properly update the class variable holding the photo array
