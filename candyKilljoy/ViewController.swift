@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var candyNameInput: UITextField!
     
-    
+    var candies: [Candy] = []
     
     let BASE_URL = "https://api.nutritionix.com/v1_1/search/"
     let PHRASE = "twizzler"
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         //TO-DO: must write code to parse search string and put underscores in place of spaces or something like that
         makeAPICall()
+        print("# of items in candies array: \(candies.count)")
     }
     
     
@@ -113,7 +114,9 @@ class ViewController: UIViewController {
             for pieceOfCandy in candyResults {
                 var candyDetails = pieceOfCandy["fields"]
                 var candyName = candyDetails!!["item_name"]
-                print(candyName!!)
+                let newCandy = Candy()
+                newCandy.name = candyName!! as! String
+                self.candies.append(newCandy)
             }
 ////            var candyItem = candyResults[0]
 //            var candyDetails = candyItem["fields"]
