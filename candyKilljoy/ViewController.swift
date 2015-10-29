@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var candyNameInput: UITextField!
+    @IBOutlet weak var candyNameInput: UITextField?
     
     
     
     let BASE_URL = "https://api.nutritionix.com/v1_1/search/"
-    let PHRASE = "twizzler"
+    var PHRASE = "twizzler"
     //let RESULTS = "0%3A5"
     let APPID = "05fe6213"
     let APPKEY = "cbe02a040321ae45dbfaf44ef0839621"
@@ -41,6 +41,10 @@ class ViewController: UIViewController {
     //MARK: - API Call
     
     func makeAPICall() {
+        //If nothing is entered into text field, "Twizzlers" will be the item searched.  Otherwise, entered text will be searched
+        if candyNameInput!.text != "" {
+            PHRASE = candyNameInput!.text!
+        }
         
         let methodArguments: [String: String!] = [
             "appId": APPID,
