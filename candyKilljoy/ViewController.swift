@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         PHRASE = "twizzler"
         candyNameInput!.text = ""
         candyArray.removeAll()
@@ -120,13 +121,15 @@ class ViewController: UIViewController {
             print(candyResults.count)
             print("The contents of candy results index 0 is \(candyResults[0])")
             
+        
             for pieceOfCandy in candyResults {
                 var candyDetails = pieceOfCandy["fields"]
                 var candyName = candyDetails!!["item_name"]
                 self.candySearched.name = String(candyName!!)
                 self.candyArray.append(self.candySearched.name)
 //                print(candyName!!)
-                }
+                
+            }
             print(self.candyArray)
 ////            var candyItem = candyResults[0]
 //            var candyDetails = candyItem["fields"]
@@ -146,6 +149,7 @@ class ViewController: UIViewController {
         }
         
         task.resume()
+        
     }
         
         
@@ -175,6 +179,15 @@ class ViewController: UIViewController {
         return (!urlVars.isEmpty ? "?" : "") + urlVars.joinWithSeparator("&")
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showCandyNamesSegue" {
+            let destVC: CandySearchResultTableViewController = segue.destinationViewController as! CandySearchResultTableViewController
+            print("Shipping the candyArray \(candyArray) to the next view")
+            let testArray = ["candy 1", "candy 2", "candy 3"]
+            destVC.candyNameResults = testArray
+            
+        }
+    }
     
 
 }
