@@ -13,7 +13,7 @@ class CandySearchResultTableViewController: UITableViewController {
     var candyNameResults: [Candy] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("The candy array passed to this view is \(candyNameResults)")
+        //print("The candy array passed to this view is \(candyNameResults)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
