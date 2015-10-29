@@ -100,7 +100,7 @@
         <!--Item 1-->
         <scene sceneID="xjq-LM-S3C">
             <objects>
-                <viewController id="Ztb-JX-7nR" sceneMemberID="viewController">
+                <viewController id="Ztb-JX-7nR" customClass="CandyDetailViewController" customModule="candyKilljoy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F7P-g9-BQn"/>
                         <viewControllerLayoutGuide type="bottom" id="ge7-HP-6st"/>
@@ -108,19 +108,37 @@
                     <view key="view" contentMode="scaleToFill" id="fje-Dq-fOM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wks-W1-BVN">
+                                <rect key="frame" x="80" y="78" width="161" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdZ-rJ-ZiT">
+                                <rect key="frame" x="80" y="252" width="161" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="ugz-89-z8l"/>
+                    <connections>
+                        <outlet property="candyCaloriesLabel" destination="AdZ-rJ-ZiT" id="v3S-lC-Z4w"/>
+                        <outlet property="candyDetailNameLabel" destination="wks-W1-BVN" id="Pha-7K-JXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfR-wB-mnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1991" y="-312"/>
         </scene>
-        <!--Candy Detail View Controller-->
+        <!--Candy Tab Bar View Controller-->
         <scene sceneID="YN9-7e-N1B">
             <objects>
-                <tabBarController id="Tkp-VO-3uw" customClass="CandyDetailViewController" customModule="candyKilljoy" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Tkp-VO-3uw" customClass="CandyTabBarViewController" customModule="candyKilljoy" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bLK-py-LJ0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
