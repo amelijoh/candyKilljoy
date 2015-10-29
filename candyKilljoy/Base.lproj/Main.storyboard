@@ -72,6 +72,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Seh-G1-8pp"/>
+                    <connections>
+                        <segue destination="Tkp-VO-3uw" kind="push" identifier="candyDetailSegue" id="Ii7-Yz-1Ie"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBP-yV-Z5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +142,7 @@
         <scene sceneID="YN9-7e-N1B">
             <objects>
                 <tabBarController id="Tkp-VO-3uw" customClass="CandyTabBarViewController" customModule="candyKilljoy" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gj0-f3-mbv"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bLK-py-LJ0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

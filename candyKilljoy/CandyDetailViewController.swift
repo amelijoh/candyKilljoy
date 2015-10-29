@@ -31,7 +31,7 @@ class CandyDetailViewController: UIViewController {
         candyDetail = tbvc!.candyDetail
         
         candyDetailNameLabel.text = candyDetail?.name
-        candyCaloriesLabel.text = candyDetail?.calories
+        candyCaloriesLabel.text = String(candyDetail?.calories)
     }
     
 
