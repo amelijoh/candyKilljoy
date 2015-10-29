@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var candyNameInput: UITextField?
     
+    
     var timer = NSTimer()
     var candies: [Candy] = []
     let BASE_URL = "https://api.nutritionix.com/v1_1/search/"
@@ -45,8 +46,6 @@ class ViewController: UIViewController {
         makeAPICall()
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("startSegue"), userInfo: nil, repeats: false)
         
-        
-        //self.performSegueWithIdentifier("showCandyNameSegue", sender: sender)
     }
     
     
