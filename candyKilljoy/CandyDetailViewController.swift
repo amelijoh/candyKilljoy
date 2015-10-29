@@ -19,6 +19,12 @@ class CandyDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tbvc = self.tabBarController as? CandyTabBarViewController
+        candyDetail = tbvc!.candyDetail
+        
+        candyDetailNameLabel.text = candyDetail?.name
+        candyCaloriesLabel.text = String(candyDetail?.calories)
 
         // Do any additional setup after loading the view.
     }
@@ -27,11 +33,7 @@ class CandyDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
-        let tbvc = self.tabBarController as? CandyTabBarViewController
-        candyDetail = tbvc!.candyDetail
         
-        candyDetailNameLabel.text = candyDetail?.name
-        candyCaloriesLabel.text = String(candyDetail?.calories)
     }
     
 

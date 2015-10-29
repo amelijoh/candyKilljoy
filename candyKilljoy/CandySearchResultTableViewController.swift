@@ -10,7 +10,10 @@ import UIKit
 
 class CandySearchResultTableViewController: UITableViewController {
 
+    
     var candyNameResults: [Candy] = []
+    var selectedCandy: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("The candy array passed to this view is \(candyNameResults)")
@@ -44,6 +47,11 @@ class CandySearchResultTableViewController: UITableViewController {
         let nextCandy = candyNameResults[indexPath.row]
         cell.textLabel!.text = nextCandy.name
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedCandy = indexPath.row
+        self.performSegueWithIdentifier("candyDetailSegue", sender: indexPath.row)
     }
     
 
@@ -82,14 +90,15 @@ class CandySearchResultTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let vc = segue.destinationViewController as! CandyTabBarViewController
+        vc.candyDetail = candyNameResults[selectedCandy!]
+        print(vc.candyDetail?.name)
     }
-    */
+
 
 }
