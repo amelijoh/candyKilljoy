@@ -24,7 +24,9 @@ class CandyDetailViewController: UIViewController {
         candyDetail = tbvc!.candyDetail
         
         candyDetailNameLabel.text = candyDetail?.name
-        candyCaloriesLabel.text = String(candyDetail?.calories)
+        if let candyCalorieCount = candyDetail?.calories {
+            candyCaloriesLabel.text = String(candyCalorieCount)
+        }
 
         // Do any additional setup after loading the view.
     }
