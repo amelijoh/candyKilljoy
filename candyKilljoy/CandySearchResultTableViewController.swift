@@ -10,7 +10,7 @@ import UIKit
 
 class CandySearchResultTableViewController: UITableViewController {
 
-    var candyNameResults = [String]()
+    var candyNameResults: [Candy] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         print("The candy array passed to this view is \(candyNameResults)")
@@ -39,11 +39,10 @@ class CandySearchResultTableViewController: UITableViewController {
         return candyNameResults.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        
-        cell.textLabel!.text = candyNameResults[indexPath.row]
+        let nextCandy = candyNameResults[indexPath.row]
+        cell.textLabel!.text = nextCandy.name
         return cell
     }
     

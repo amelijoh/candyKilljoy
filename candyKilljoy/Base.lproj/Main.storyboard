@@ -29,7 +29,6 @@
                                 <state key="normal" title="search"/>
                                 <connections>
                                     <action selector="candySearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ubu-PG-853"/>
-                                    <segue destination="uv5-Wx-opf" kind="push" identifier="showCandyNamesSegue" id="e4h-uc-KMA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,6 +38,7 @@
                     <navigationItem key="navigationItem" id="loU-hj-lMY"/>
                     <connections>
                         <outlet property="candyNameInput" destination="akq-G4-bOz" id="ZZV-tQ-9Hn"/>
+                        <segue destination="uv5-Wx-opf" kind="push" identifier="showCandyNameSegue" id="hSi-Ya-i4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
