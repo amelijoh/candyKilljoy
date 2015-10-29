@@ -16,6 +16,7 @@
 		3B7A5E961BE295CB007AB22E /* CandyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A5E951BE295CB007AB22E /* CandyDetailViewController.swift */; };
 		3BD866151BE140BB0033C931 /* CandySearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD866141BE140BB0033C931 /* CandySearchResultTableViewController.swift */; };
 		3F2B2BB01BDEAB1C008A4848 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B2BAF1BDEAB1C008A4848 /* Candy.swift */; };
+		3F6209BF1BE2BAF0007CEB69 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6209BE1BE2BAF0007CEB69 /* ExerciseViewController.swift */; };
 		3F8620B01BE16156001B18F5 /* APIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8620AF1BE16156001B18F5 /* APIFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		3B7A5E951BE295CB007AB22E /* CandyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyDetailViewController.swift; sourceTree = "<group>"; };
 		3BD866141BE140BB0033C931 /* CandySearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandySearchResultTableViewController.swift; sourceTree = "<group>"; };
 		3F2B2BAF1BDEAB1C008A4848 /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
+		3F6209BE1BE2BAF0007CEB69 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		3F8620AF1BE16156001B18F5 /* APIFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 				3BD866141BE140BB0033C931 /* CandySearchResultTableViewController.swift */,
 				3B7A5E751BE26B5D007AB22E /* CandyTabBarViewController.swift */,
 				3B7A5E951BE295CB007AB22E /* CandyDetailViewController.swift */,
+				3F6209BE1BE2BAF0007CEB69 /* ExerciseViewController.swift */,
 				3B0AC51F1BDEA4D400FD423E /* Main.storyboard */,
 				3B0AC5221BDEA4D400FD423E /* Assets.xcassets */,
 				3B0AC5241BDEA4D400FD423E /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 				3F8620B01BE16156001B18F5 /* APIFormatter.swift in Sources */,
 				3B0AC51C1BDEA4D400FD423E /* AppDelegate.swift in Sources */,
 				3B7A5E961BE295CB007AB22E /* CandyDetailViewController.swift in Sources */,
+				3F6209BF1BE2BAF0007CEB69 /* ExerciseViewController.swift in Sources */,
 				3B7A5E761BE26B5D007AB22E /* CandyTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
