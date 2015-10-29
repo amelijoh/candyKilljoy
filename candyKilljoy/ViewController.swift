@@ -179,8 +179,8 @@ class ViewController: UIViewController {
     }
     
     func startSegue() {
-        print(candies.count)
-        print("The calories in item are: \(candies[2].calories)")
+        //print(candies.count)
+        //print("The calories in item are: \(candies[2].calories)")
         self.performSegueWithIdentifier("showCandyNameSegue", sender: self)
     }
 }
