@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var candyNameInput: UITextField?
     
-    
-    
+    var candySearched = Candy()
+    var candyArray = [String]()
     let BASE_URL = "https://api.nutritionix.com/v1_1/search/"
     var PHRASE = "twizzler"
     //let RESULTS = "0%3A5"
@@ -29,6 +29,12 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        PHRASE = "twizzler"
+        candyNameInput!.text = ""
+        candyArray.removeAll()
     }
 
     @IBAction func candySearchButton(sender: UIButton) {
@@ -117,8 +123,11 @@ class ViewController: UIViewController {
             for pieceOfCandy in candyResults {
                 var candyDetails = pieceOfCandy["fields"]
                 var candyName = candyDetails!!["item_name"]
-                print(candyName!!)
-            }
+                self.candySearched.name = String(candyName!!)
+                self.candyArray.append(self.candySearched.name)
+//                print(candyName!!)
+                }
+            print(self.candyArray)
 ////            var candyItem = candyResults[0]
 //            var candyDetails = candyItem["fields"]
 //            var candyName = candyDetails!!["item_name"]
