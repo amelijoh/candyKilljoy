@@ -49,6 +49,9 @@ class ViewController: UIViewController {
     }
     
     
+    
+  //  curl -v  -X GET "https://api.nutritionix.com/v1_1/search/taco?results=0%3A20&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id%2Cnf_calories&appId=05fe6213&appKey=cbe02a040321ae45dbfaf44ef0839621"
+    
     //MARK: - API Call
     
     func makeAPICall() {
@@ -66,7 +69,7 @@ class ViewController: UIViewController {
         let session = NSURLSession.sharedSession()
         
         /* 4 - Create the NSURLRequest using properly escaped URL */
-        let urlString = BASE_URL + "\(PHRASE)" + escapedParameters(methodArguments)
+        let urlString = BASE_URL + "\(PHRASE)" + escapedParameters(methodArguments) + "&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id%2Cnf_calories"
         //print(urlString)
         let url = NSURL(string: urlString)!
         //print(url)
@@ -127,9 +130,11 @@ class ViewController: UIViewController {
             
             for pieceOfCandy in candyResults {
                 var newCandy = Candy()
-                var candyDetails = pieceOfCandy["fields"]
-                var candyName = candyDetails!!["item_name"]
+                let candyDetails = pieceOfCandy["fields"]
+                let candyName = candyDetails!!["item_name"]
+                let candyCalories = candyDetails!!["nf_calories"]
                 newCandy.name = candyName as! String
+                newCandy.calories = candyCalories as! Int
                 myCandies.append(newCandy)
             }
 
@@ -175,6 +180,7 @@ class ViewController: UIViewController {
     
     func startSegue() {
         print(candies.count)
+        print("The calories in item are: \(candies[2].calories)")
         self.performSegueWithIdentifier("showCandyNameSegue", sender: self)
     }
 }
