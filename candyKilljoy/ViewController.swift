@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var candyNameInput: UITextField!
+    @IBOutlet weak var candyNameInput: UITextField?
     
+    
+    var timer = NSTimer()
     var candies: [Candy] = []
-    
     let BASE_URL = "https://api.nutritionix.com/v1_1/search/"
-    let PHRASE = "twizzler"
+    var PHRASE = "twizzler"
     //let RESULTS = "0%3A5"
     let APPID = "05fe6213"
     let APPKEY = "cbe02a040321ae45dbfaf44ef0839621"
@@ -30,18 +31,31 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        PHRASE = "twizzler"
+        candyNameInput!.text = ""
+       
+    }
 
     @IBAction func candySearchButton(sender: UIButton) {
         
         //TO-DO: must write code to parse search string and put underscores in place of spaces or something like that
+        print(candies.count)
         makeAPICall()
-        print("# of items in candies array: \(candies.count)")
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("startSegue"), userInfo: nil, repeats: false)
+        
     }
     
     
     //MARK: - API Call
     
     func makeAPICall() {
+        //If nothing is entered into text field, "Twizzlers" will be the item searched.  Otherwise, entered text will be searched
+        if candyNameInput!.text != "" {
+            PHRASE = APIFormatter.formatSearchString(candyNameInput!.text!)
+        }
         
         let methodArguments: [String: String!] = [
             "appId": APPID,
@@ -96,7 +110,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            print(parsedResult)
+            //print(parsedResult)
 //            /* GUARD: Did Flickr return an error? */
 //            guard let stat = parsedResult["stat"] as? String where stat == "ok" else {
 //                print("Flickr API returned an error. See error code and message in \(parsedResult)")
@@ -108,36 +122,25 @@ class ViewController: UIViewController {
                 print("Cannot find keys 'hits' in \(parsedResult)")
                 return
             }
-            print(candyResults.count)
-            print("The contents of candy results index 0 is \(candyResults[0])")
+        
+            var myCandies: [Candy] = []
             
             for pieceOfCandy in candyResults {
+                var newCandy = Candy()
                 var candyDetails = pieceOfCandy["fields"]
                 var candyName = candyDetails!!["item_name"]
-                let newCandy = Candy()
-                newCandy.name = candyName!! as! String
-                self.candies.append(newCandy)
+                newCandy.name = candyName as! String
+                myCandies.append(newCandy)
             }
-////            var candyItem = candyResults[0]
-//            var candyDetails = candyItem["fields"]
-//            var candyName = candyDetails!!["item_name"]
-//            print(candyName)
-            
-    
-//            let photoArray = photosDictionary["photo"] as! [[String: AnyObject]]
-//            
-//            // I'm assuming this is needed to properly update the class variable holding the photo array
-//            dispatch_async(dispatch_get_main_queue(), {
-//                //self.celebrityPhotoArray =  photoArray
-//                //self.randomSelectNextCelebrityPhoto()
-//            })
-            
-            
+
+//            // I'm assuming this is needed to properly update the class variable holding the candy array
+            dispatch_async(dispatch_get_main_queue(), {
+                self.candies = myCandies
+                
+            })
         }
-        
         task.resume()
     }
-        
         
     
     
@@ -159,13 +162,20 @@ class ViewController: UIViewController {
             
             /* Append it */
             urlVars += [key + "=" + "\(escapedValue!)"]
-            
         }
-        
         return (!urlVars.isEmpty ? "?" : "") + urlVars.joinWithSeparator("&")
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showCandyNameSegue" {
+            let destVC: CandySearchResultTableViewController = segue.destinationViewController as! CandySearchResultTableViewController
+            destVC.candyNameResults = self.candies
+        }
+    }
     
-
+    func startSegue() {
+        print(candies.count)
+        self.performSegueWithIdentifier("showCandyNameSegue", sender: self)
+    }
 }
 
