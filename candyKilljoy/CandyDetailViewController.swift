@@ -8,10 +8,23 @@
 
 import UIKit
 
-class CandyDetailViewController: UITabBarController {
+class CandyDetailViewController: UIViewController {
 
+    @IBOutlet weak var candyDetailNameLabel: UILabel!
+    
+    @IBOutlet weak var candyCaloriesLabel: UILabel!
+    
+    var candyDetail = Candy?()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tbvc = self.tabBarController as? CandyTabBarViewController
+        candyDetail = tbvc!.candyDetail
+        
+        candyDetailNameLabel.text = candyDetail?.name
+        candyCaloriesLabel.text = String(candyDetail?.calories)
 
         // Do any additional setup after loading the view.
     }
@@ -19,6 +32,8 @@ class CandyDetailViewController: UITabBarController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        
     }
     
 

@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         //TO-DO: must write code to parse search string and put underscores in place of spaces or something like that
         print(candies.count)
         makeAPICall()
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("startSegue"), userInfo: nil, repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: Selector("startSegue"), userInfo: nil, repeats: false)
         
     }
     

@@ -12,7 +12,8 @@
 		3B0AC5211BDEA4D400FD423E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AC51F1BDEA4D400FD423E /* Main.storyboard */; };
 		3B0AC5231BDEA4D400FD423E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AC5221BDEA4D400FD423E /* Assets.xcassets */; };
 		3B0AC5261BDEA4D400FD423E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AC5241BDEA4D400FD423E /* LaunchScreen.storyboard */; };
-		3B7A5E761BE26B5D007AB22E /* CandyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A5E751BE26B5D007AB22E /* CandyDetailViewController.swift */; };
+		3B7A5E761BE26B5D007AB22E /* CandyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A5E751BE26B5D007AB22E /* CandyTabBarViewController.swift */; };
+		3B7A5E961BE295CB007AB22E /* CandyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A5E951BE295CB007AB22E /* CandyDetailViewController.swift */; };
 		3BD866151BE140BB0033C931 /* CandySearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD866141BE140BB0033C931 /* CandySearchResultTableViewController.swift */; };
 		3F2B2BB01BDEAB1C008A4848 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B2BAF1BDEAB1C008A4848 /* Candy.swift */; };
 		3F8620B01BE16156001B18F5 /* APIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8620AF1BE16156001B18F5 /* APIFormatter.swift */; };
@@ -26,7 +27,8 @@
 		3B0AC5221BDEA4D400FD423E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B0AC5251BDEA4D400FD423E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B0AC5271BDEA4D400FD423E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B7A5E751BE26B5D007AB22E /* CandyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyDetailViewController.swift; sourceTree = "<group>"; };
+		3B7A5E751BE26B5D007AB22E /* CandyTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyTabBarViewController.swift; sourceTree = "<group>"; };
+		3B7A5E951BE295CB007AB22E /* CandyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyDetailViewController.swift; sourceTree = "<group>"; };
 		3BD866141BE140BB0033C931 /* CandySearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandySearchResultTableViewController.swift; sourceTree = "<group>"; };
 		3F2B2BAF1BDEAB1C008A4848 /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 		3F8620AF1BE16156001B18F5 /* APIFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIFormatter.swift; sourceTree = "<group>"; };
@@ -67,7 +69,8 @@
 				3B0AC51B1BDEA4D400FD423E /* AppDelegate.swift */,
 				3B0AC51D1BDEA4D400FD423E /* ViewController.swift */,
 				3BD866141BE140BB0033C931 /* CandySearchResultTableViewController.swift */,
-				3B7A5E751BE26B5D007AB22E /* CandyDetailViewController.swift */,
+				3B7A5E751BE26B5D007AB22E /* CandyTabBarViewController.swift */,
+				3B7A5E951BE295CB007AB22E /* CandyDetailViewController.swift */,
 				3B0AC51F1BDEA4D400FD423E /* Main.storyboard */,
 				3B0AC5221BDEA4D400FD423E /* Assets.xcassets */,
 				3B0AC5241BDEA4D400FD423E /* LaunchScreen.storyboard */,
@@ -160,7 +163,8 @@
 				3F2B2BB01BDEAB1C008A4848 /* Candy.swift in Sources */,
 				3F8620B01BE16156001B18F5 /* APIFormatter.swift in Sources */,
 				3B0AC51C1BDEA4D400FD423E /* AppDelegate.swift in Sources */,
-				3B7A5E761BE26B5D007AB22E /* CandyDetailViewController.swift in Sources */,
+				3B7A5E961BE295CB007AB22E /* CandyDetailViewController.swift in Sources */,
+				3B7A5E761BE26B5D007AB22E /* CandyTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
