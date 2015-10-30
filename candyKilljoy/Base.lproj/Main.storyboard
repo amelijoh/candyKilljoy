@@ -17,25 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-Xy-nAD">
-                                <rect key="frame" x="92" y="337" width="135" height="135"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="135" id="404-Ii-3M2"/>
-                                    <constraint firstAttribute="width" constant="135" id="cPU-iX-Apg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="gimme candy">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="candySearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ubu-PG-853"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter candy name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akq-G4-bOz">
-                                <rect key="frame" x="43" y="269" width="235" height="30"/>
+                                <rect key="frame" x="42" y="194" width="235" height="30"/>
                                 <animations/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -56,17 +39,44 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad-candy-corn" translatesAutoresizingMaskIntoConstraints="NO" id="o9m-T0-vCt">
+                                <rect key="frame" x="10" y="314" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5gO-99-ilV"/>
+                                    <constraint firstAttribute="height" constant="200" id="8gX-Pm-ppw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-Xy-nAD">
+                                <rect key="frame" x="23.5" y="247" width="273" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.60713918590000004" blue="0.13201583059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="4OX-3O-yXB"/>
+                                    <constraint firstAttribute="height" constant="44" id="iKy-hP-7oW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Click here &amp; gimme some candy!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="candySearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ubu-PG-853"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.60713918585526316" blue="0.13201583059210525" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="akq-G4-bOz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="205" id="3oi-LQ-PnG"/>
-                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="top" secondItem="akq-G4-bOz" secondAttribute="bottom" constant="38" id="48P-O9-KuM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o9m-T0-vCt" secondAttribute="bottom" constant="54" id="ESH-NA-Eek"/>
                             <constraint firstItem="akq-G4-bOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUX-4k-i5a"/>
                             <constraint firstItem="h2s-Xy-nAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IgL-DO-tYd"/>
-                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBZ-33-hrn"/>
+                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="top" secondItem="akq-G4-bOz" secondAttribute="bottom" constant="23" id="JNF-g9-hJa"/>
+                            <constraint firstAttribute="trailing" secondItem="o9m-T0-vCt" secondAttribute="trailing" constant="10" id="MSQ-Zl-IEw"/>
+                            <constraint firstItem="o9m-T0-vCt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="eUF-dE-3fY"/>
+                            <constraint firstItem="o9m-T0-vCt" firstAttribute="top" secondItem="h2s-Xy-nAD" secondAttribute="bottom" constant="23" id="fTG-Lf-oV5"/>
                             <constraint firstItem="mZp-qJ-9vm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="np6-4g-vJm"/>
                             <constraint firstItem="mZp-qJ-9vm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2.5" id="nrN-cb-LeZ"/>
+                            <constraint firstItem="akq-G4-bOz" firstAttribute="top" secondItem="mZp-qJ-9vm" secondAttribute="bottom" constant="8" id="s1t-6T-zil"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="loU-hj-lMY"/>
@@ -618,5 +628,6 @@
     <resources>
         <image name="appbar.bike" width="76" height="76"/>
         <image name="appbar.food.cupcake" width="76" height="76"/>
+        <image name="sad-candy-corn" width="600" height="400"/>
     </resources>
 </document>
