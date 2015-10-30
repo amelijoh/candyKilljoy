@@ -30,5 +30,8 @@ class CandyDetailViewController: UIViewController {
 
     }
 
+    @IBAction func backToMainMenu(sender: AnyObject) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     
 }

@@ -12,7 +12,4 @@ class CandyTabBarViewController: UITabBarController {
 
     var candyDetail = Candy?()
     
-
-    
-
 }

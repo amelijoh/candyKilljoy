@@ -604,6 +604,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoJ-sn-3RE">
+                                <rect key="frame" x="115" y="481" width="91" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Search Again">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToMainMenu:" destination="Ztb-JX-7nR" eventType="touchUpInside" id="1Dc-Aa-Xgt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.60179785299999999" green="0.081067299379999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -614,10 +624,14 @@
                             <constraint firstItem="wks-W1-BVN" firstAttribute="centerX" secondItem="fje-Dq-fOM" secondAttribute="centerX" id="AhF-RT-DTz"/>
                             <constraint firstItem="AdZ-rJ-ZiT" firstAttribute="centerX" secondItem="fje-Dq-fOM" secondAttribute="centerX" id="CWd-ql-1wA"/>
                             <constraint firstItem="MJ0-aS-hs3" firstAttribute="centerY" secondItem="fje-Dq-fOM" secondAttribute="centerY" constant="5" id="Nho-kt-bwX"/>
+                            <constraint firstItem="GoJ-sn-3RE" firstAttribute="centerX" secondItem="fje-Dq-fOM" secondAttribute="centerX" id="hV1-0b-HKc"/>
+                            <constraint firstItem="ge7-HP-6st" firstAttribute="top" secondItem="GoJ-sn-3RE" secondAttribute="bottom" constant="8" id="nN6-7l-eej"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Details" image="appbar.food.cupcake" id="ugz-89-z8l"/>
+                    <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="candyCaloriesLabel" destination="AdZ-rJ-ZiT" id="v3S-lC-Z4w"/>
                         <outlet property="candyDetailNameLabel" destination="wks-W1-BVN" id="Pha-7K-JXn"/>
