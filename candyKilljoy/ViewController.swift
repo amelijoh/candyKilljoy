@@ -31,7 +31,6 @@ class ViewController: UIViewController {
 
     @IBAction func candySearchButton(sender: UIButton) {
         
-        print(candies.count)
         makeAPICall()
         timer = NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: Selector("startSegue"), userInfo: nil, repeats: false)
     }
