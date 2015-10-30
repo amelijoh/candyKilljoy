@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -104,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="1088" y="289"/>
         </scene>
-        <!--Item 2-->
+        <!--Exercise-->
         <scene sceneID="da1-5e-enM">
             <objects>
                 <viewController id="ZpN-HP-GEa" customClass="ExerciseViewController" customModule="candyKilljoy" customModuleProvider="target" sceneMemberID="viewController">
@@ -310,7 +310,7 @@
                         <color key="backgroundColor" red="0.29411764709999999" green="0.67450980390000004" blue="0.63529411759999999" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="kS5-8a-RHP"/>
+                    <tabBarItem key="tabBarItem" title="Exercise" id="kS5-8a-RHP"/>
                     <connections>
                         <outlet property="cycle140Label" destination="dlR-5d-Pim" id="QTA-ao-YCt"/>
                         <outlet property="cycle170Label" destination="GY0-Y5-gwV" id="6pO-Ch-ph2"/>
@@ -330,7 +330,7 @@
             </objects>
             <point key="canvasLocation" x="1991" y="368"/>
         </scene>
-        <!--Item 1-->
+        <!--Details-->
         <scene sceneID="xjq-LM-S3C">
             <objects>
                 <viewController id="Ztb-JX-7nR" customClass="CandyDetailViewController" customModule="candyKilljoy" customModuleProvider="target" sceneMemberID="viewController">
@@ -366,7 +366,7 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.60179785299999999" green="0.081067299379999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wks-W1-BVN" firstAttribute="centerX" secondItem="fje-Dq-fOM" secondAttribute="centerX" id="AhF-RT-DTz"/>
                             <constraint firstItem="AdZ-rJ-ZiT" firstAttribute="top" secondItem="wks-W1-BVN" secondAttribute="bottom" constant="149" id="CIl-L1-AMx"/>
@@ -374,7 +374,7 @@
                             <constraint firstItem="wks-W1-BVN" firstAttribute="top" secondItem="F7P-g9-BQn" secondAttribute="bottom" constant="101" id="M2W-g6-eK9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ugz-89-z8l"/>
+                    <tabBarItem key="tabBarItem" title="Details" id="ugz-89-z8l"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="candyCaloriesLabel" destination="AdZ-rJ-ZiT" id="v3S-lC-Z4w"/>
