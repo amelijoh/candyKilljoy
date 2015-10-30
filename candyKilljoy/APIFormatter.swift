@@ -10,10 +10,10 @@ import Foundation
 
 class APIFormatter {
     
+    //The function removes empty spaces from the search phrase and inserts the proper characters for the API
     static func formatSearchString(stringToSearch: String) -> String {
         var newString = ""
         if stringToSearch.containsString(" ") {
-            print("Contains Spaces")
             newString = stringToSearch.stringByReplacingOccurrencesOfString(" ", withString: "%20")
             
         } else { newString = stringToSearch }

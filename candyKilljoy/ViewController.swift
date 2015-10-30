@@ -15,22 +15,12 @@ class ViewController: UIViewController {
     
     var timer = NSTimer()
     var candies: [Candy] = []
+    
     let BASE_URL = "https://api.nutritionix.com/v1_1/search/"
     var PHRASE = "twizzler"
-    //let RESULTS = "0%3A5"
     let APPID = "05fe6213"
     let APPKEY = "cbe02a040321ae45dbfaf44ef0839621"
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,17 +31,11 @@ class ViewController: UIViewController {
 
     @IBAction func candySearchButton(sender: UIButton) {
         
-        //TO-DO: must write code to parse search string and put underscores in place of spaces or something like that
-        print(candies.count)
         makeAPICall()
         timer = NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: Selector("startSegue"), userInfo: nil, repeats: false)
-        
     }
     
-    
-    
-  //  curl -v  -X GET "https://api.nutritionix.com/v1_1/search/taco?results=0%3A20&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id%2Cnf_calories&appId=05fe6213&appKey=cbe02a040321ae45dbfaf44ef0839621"
-    
+  
     //MARK: - API Call
     
     func makeAPICall() {
@@ -70,11 +54,8 @@ class ViewController: UIViewController {
         
         /* 4 - Create the NSURLRequest using properly escaped URL */
         let urlString = BASE_URL + "\(PHRASE)" + escapedParameters(methodArguments) + "&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id%2Cnf_calories"
-        //print(urlString)
         let url = NSURL(string: urlString)!
-        //print(url)
         let request = NSURLRequest(URL: url)
-        print(request)
         
         
         let task = session.dataTaskWithRequest(request) { (data, response, error) in
@@ -112,15 +93,9 @@ class ViewController: UIViewController {
                 print("Could not parse the data as JSON: '\(data)'")
                 return
             }
+          
             
-            //print(parsedResult)
-//            /* GUARD: Did Flickr return an error? */
-//            guard let stat = parsedResult["stat"] as? String where stat == "ok" else {
-//                print("Flickr API returned an error. See error code and message in \(parsedResult)")
-//                return
-//            }
-            
-            /* GUARD: Is "photos" key in our result? */
+            /* GUARD: Is "hits" key in our result? */
             guard let candyResults = parsedResult["hits"] as? NSArray else {
                 print("Cannot find keys 'hits' in \(parsedResult)")
                 return
@@ -129,7 +104,7 @@ class ViewController: UIViewController {
             var myCandies: [Candy] = []
             
             for pieceOfCandy in candyResults {
-                var newCandy = Candy()
+                let newCandy = Candy()
                 let candyDetails = pieceOfCandy["fields"]
                 let candyName = candyDetails!!["item_name"]
                 let candyCalories = candyDetails!!["nf_calories"]
@@ -138,7 +113,6 @@ class ViewController: UIViewController {
                 myCandies.append(newCandy)
             }
 
-//            // I'm assuming this is needed to properly update the class variable holding the candy array
             dispatch_async(dispatch_get_main_queue(), {
                 self.candies = myCandies
                 
@@ -179,8 +153,7 @@ class ViewController: UIViewController {
     }
     
     func startSegue() {
-        //print(candies.count)
-        //print("The calories in item are: \(candies[2].calories)")
+        
         self.performSegueWithIdentifier("showCandyNameSegue", sender: self)
     }
 }

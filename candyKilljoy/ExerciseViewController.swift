@@ -38,7 +38,6 @@ class ExerciseViewController: UIViewController {
             candyCalorieRetrieved = Double(candyCalorieCount)
             
         }
-        print("Our chosen candy has \(candyCalorieRetrieved) calories")
         
         run140Label.text = "Run for \(Double(round(100 * (candyCalorieRetrieved / 10.6))/100)) minutes"
         run170Label.text = "Run for \(Double(round(100 * (candyCalorieRetrieved / 12.8))/100)) minutes"
