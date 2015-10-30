@@ -20,6 +20,7 @@
 		3F7B6D2E1BE3C3B7006DF55F /* appbar.bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B6D2C1BE3C3B7006DF55F /* appbar.bike.png */; };
 		3F7B6D2F1BE3C3B7006DF55F /* appbar.food.cupcake.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B6D2D1BE3C3B7006DF55F /* appbar.food.cupcake.png */; };
 		3F7B6D311BE3E748006DF55F /* sad-candy-corn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B6D301BE3E748006DF55F /* sad-candy-corn.jpg */; };
+		3F7B6D331BE3ED93006DF55F /* halloweenCandies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B6D321BE3ED93006DF55F /* halloweenCandies.jpg */; };
 		3F8620B01BE16156001B18F5 /* APIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8620AF1BE16156001B18F5 /* APIFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		3F7B6D2C1BE3C3B7006DF55F /* appbar.bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appbar.bike.png; path = Assets.xcassets/AppIcon.appiconset/appbar.bike.png; sourceTree = "<group>"; };
 		3F7B6D2D1BE3C3B7006DF55F /* appbar.food.cupcake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appbar.food.cupcake.png; path = Assets.xcassets/AppIcon.appiconset/appbar.food.cupcake.png; sourceTree = "<group>"; };
 		3F7B6D301BE3E748006DF55F /* sad-candy-corn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "sad-candy-corn.jpg"; path = "Assets.xcassets/sad-candy-corn.jpg"; sourceTree = "<group>"; };
+		3F7B6D321BE3ED93006DF55F /* halloweenCandies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = halloweenCandies.jpg; path = Assets.xcassets/halloweenCandies.jpg; sourceTree = "<group>"; };
 		3F8620AF1BE16156001B18F5 /* APIFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				3F6209BE1BE2BAF0007CEB69 /* ExerciseViewController.swift */,
 				3B0AC51F1BDEA4D400FD423E /* Main.storyboard */,
 				3B0AC5221BDEA4D400FD423E /* Assets.xcassets */,
+				3F7B6D321BE3ED93006DF55F /* halloweenCandies.jpg */,
 				3F7B6D301BE3E748006DF55F /* sad-candy-corn.jpg */,
 				3F7B6D2C1BE3C3B7006DF55F /* appbar.bike.png */,
 				3F7B6D2D1BE3C3B7006DF55F /* appbar.food.cupcake.png */,
@@ -161,6 +164,7 @@
 				3F7B6D2E1BE3C3B7006DF55F /* appbar.bike.png in Resources */,
 				3F7B6D2F1BE3C3B7006DF55F /* appbar.food.cupcake.png in Resources */,
 				3B0AC5231BDEA4D400FD423E /* Assets.xcassets in Resources */,
+				3F7B6D331BE3ED93006DF55F /* halloweenCandies.jpg in Resources */,
 				3F7B6D311BE3E748006DF55F /* sad-candy-corn.jpg in Resources */,
 				3B0AC5211BDEA4D400FD423E /* Main.storyboard in Resources */,
 			);
