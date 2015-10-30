@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -17,23 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter candy name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akq-G4-bOz">
-                                <rect key="frame" x="66" y="154" width="189" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-Xy-nAD">
+                                <rect key="frame" x="92" y="337" width="135" height="135"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-Xy-nAD">
-                                <rect key="frame" x="98" y="317" width="124" height="103"/>
-                                <animations/>
-                                <state key="normal" title="search"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="404-Ii-3M2"/>
+                                    <constraint firstAttribute="width" constant="135" id="cPU-iX-Apg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="search candy">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="candySearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ubu-PG-853"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter candy name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akq-G4-bOz">
+                                <rect key="frame" x="42" y="152" width="235" height="30"/>
+                                <animations/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="lr6-a7-Ybx"/>
+                                    <constraint firstAttribute="height" constant="30" id="vRn-g6-FJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.60713918585526316" blue="0.13201583059210525" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="akq-G4-bOz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="88" id="3oi-LQ-PnG"/>
+                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="top" secondItem="akq-G4-bOz" secondAttribute="bottom" constant="155" id="48P-O9-KuM"/>
+                            <constraint firstItem="akq-G4-bOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUX-4k-i5a"/>
+                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IgL-DO-tYd"/>
+                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBZ-33-hrn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="loU-hj-lMY"/>
                     <connections>
