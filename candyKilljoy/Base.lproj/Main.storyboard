@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -310,7 +310,7 @@
                         <color key="backgroundColor" red="0.29411764709999999" green="0.67450980390000004" blue="0.63529411759999999" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Exercise" id="kS5-8a-RHP"/>
+                    <tabBarItem key="tabBarItem" title="Exercise" image="appbar.bike" id="kS5-8a-RHP"/>
                     <connections>
                         <outlet property="cycle140Label" destination="dlR-5d-Pim" id="QTA-ao-YCt"/>
                         <outlet property="cycle170Label" destination="GY0-Y5-gwV" id="6pO-Ch-ph2"/>
@@ -374,7 +374,7 @@
                             <constraint firstItem="wks-W1-BVN" firstAttribute="top" secondItem="F7P-g9-BQn" secondAttribute="bottom" constant="101" id="M2W-g6-eK9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Details" id="ugz-89-z8l"/>
+                    <tabBarItem key="tabBarItem" title="Details" image="appbar.food.cupcake" id="ugz-89-z8l"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="candyCaloriesLabel" destination="AdZ-rJ-ZiT" id="v3S-lC-Z4w"/>
@@ -425,4 +425,8 @@
             <point key="canvasLocation" x="130" y="289"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appbar.bike" width="76" height="76"/>
+        <image name="appbar.food.cupcake" width="76" height="76"/>
+    </resources>
 </document>
