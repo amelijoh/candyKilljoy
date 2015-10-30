@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DNI-ik-bwn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -27,15 +27,22 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="search candy">
+                                <state key="normal" title="gimme candy">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="candySearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ubu-PG-853"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Candy Killjoy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZp-qJ-9vm">
+                                <rect key="frame" x="20" y="81" width="273" height="105"/>
+                                <color key="tintColor" red="1" green="0.60713918590000004" blue="0.13201583059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter candy name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akq-G4-bOz">
-                                <rect key="frame" x="42" y="152" width="235" height="30"/>
+                                <rect key="frame" x="43" y="269" width="235" height="30"/>
                                 <animations/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -49,8 +56,8 @@
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.60713918585526316" blue="0.13201583059210525" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="akq-G4-bOz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="88" id="3oi-LQ-PnG"/>
-                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="top" secondItem="akq-G4-bOz" secondAttribute="bottom" constant="155" id="48P-O9-KuM"/>
+                            <constraint firstItem="akq-G4-bOz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="205" id="3oi-LQ-PnG"/>
+                            <constraint firstItem="h2s-Xy-nAD" firstAttribute="top" secondItem="akq-G4-bOz" secondAttribute="bottom" constant="38" id="48P-O9-KuM"/>
                             <constraint firstItem="akq-G4-bOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUX-4k-i5a"/>
                             <constraint firstItem="h2s-Xy-nAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IgL-DO-tYd"/>
                             <constraint firstItem="h2s-Xy-nAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBZ-33-hrn"/>
