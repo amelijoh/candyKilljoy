@@ -25,7 +25,7 @@ class CandyDetailViewController: UIViewController {
         
         candyDetailNameLabel.text = candyDetail?.name
         if let candyCalorieCount = candyDetail?.calories {
-            candyCaloriesLabel.text = String(candyCalorieCount)
+            candyCaloriesLabel.text = String(candyCalorieCount) + " calories"
         }
 
         // Do any additional setup after loading the view.

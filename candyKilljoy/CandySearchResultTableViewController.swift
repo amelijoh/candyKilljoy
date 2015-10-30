@@ -45,6 +45,7 @@ class CandySearchResultTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         let nextCandy = candyNameResults[indexPath.row]
+        cell.textLabel?.textColor = UIColor(red: 255/255.0, green: 155/255.0, blue: 34/255.0, alpha:1.0)
         cell.textLabel!.text = nextCandy.name
         return cell
     }
